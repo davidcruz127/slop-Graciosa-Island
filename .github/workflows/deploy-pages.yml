@@ -1,0 +1,67 @@
+name: Test and deploy La Graciosa
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run island regression tests
+        run: >-
+          node --test
+          tests/boot.test.cjs
+          tests/graciosa-coast.test.mjs
+          tests/graciosa-exploration.test.mjs
+          tests/graciosa-geodata.test.mjs
+          tests/graciosa-runtime.test.cjs
+          tests/graciosa-satellite.test.mjs
+          tests/graciosa-terrain.test.mjs
+          tests/graciosa-water.test.cjs
+          tests/island-terrain-details.test.mjs
+
+      - name: Build production site
+        run: node tools/build-site.mjs
+
+      - name: Upload GitHub Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

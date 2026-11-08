@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-11-08T10:30:00Z",
+  "generatedOnPlatform": "win32",
+  "projectType": "webapp",
+  "setup": [],
+  "assertions": [
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "node",
+      "args": [
+        "--test",
+        "tests/boot.test.cjs",
+        "tests/graciosa-exploration.test.mjs",
+        "tests/graciosa-runtime.test.cjs",
+        "tests/graciosa-coast.test.mjs",
+        "tests/graciosa-geodata.test.mjs",
+        "tests/graciosa-satellite.test.mjs",
+        "tests/graciosa-terrain.test.mjs",
+        "tests/island-terrain-details.test.mjs",
+        "tests/graciosa-water.test.cjs"
+      ],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "production-site-build",
+      "kind": "process",
+      "command": "node",
+      "args": [
+        "tools/build-site.mjs"
+      ],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 30
+    },
+    {
+      "name": "home-includes-seagull-mode",
+      "kind": "http-probe",
+      "startCommand": "node",
+      "startArgs": [
+        "-e",
+        "const http=require('node:http'),fs=require('node:fs');http.createServer((_req,res)=>{res.writeHead(200,{'content-type':'text/html'});res.end(fs.readFileSync('dist/index.html'));}).listen(8766,'127.0.0.1');"
+      ],
+      "url": "http://127.0.0.1:8766/",
+      "verificationMethod": "output-contains",
+      "expected": "data-exploration-mode=\"seagull\"",
+      "timeoutSeconds": 30
+    }
+  ]
+}

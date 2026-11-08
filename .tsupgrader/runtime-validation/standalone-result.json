@@ -1,0 +1,141 @@
+{
+  "planHash": "8d6be8973024bf7d7e277437fcdd0a5e9094772cccc8aef13ef34b504f0e75a4",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-11-08T16:33:00.8042986Z",
+  "retryCount": 0,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 0,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\u2714 city module preloads start after the import map and before stylesheets (5.5732ms)\r\n\u2714 native module entry and imports share canonical preloaded URLs on GitHub Pages (698.614ms)\r\n\u2714 coast rings remove duplicate closure points and keep shoreline segments smooth and bounded (10.8615ms)\r\n\u2714 the full island coastline and islet receive continuous shallows and wave-matched foam geometry (310.0741ms)\r\n\u2714 walking heading points the model forward along its actual world velocity (2.026ms)\r\n\u2714 walking stays on land, avoids building footprints, roads and steep grades (3.2718ms)\r\n\u2714 walking acceleration normalizes diagonal input and keeps blocked motion inside land (2.2814ms)\r\n\u2714 analog movement scales walking speed for precise steering (7.8368ms)\r\n\u2714 person and bicycle modes apply distinct travel speeds while the gull can fly over the sea (12.8431ms)\r\n\u2714 bicycle reverse and handbrake have distinct movement behavior (3.003ms)\r\n\u2714 the foot jump follows a gravity arc, lands, and cannot double-jump in the air (0.8532ms)\r\n\u2714 free-flight controls climb vertically, accelerate and brake without ground constraints (1.1142ms)\r\n\u2714 the seagull banks into turns and pitches smoothly while climbing (1.4417ms)\r\n\u2714 spawn inside mapped building can exit and teleport candidates find nearby safe ground (1.8245ms)\r\n\u2714 island points of interest have stable ids and compass headings wrap north (0.5981ms)\r\n\u2714 all displayed real-island landmarks resolve to safe teleport destinations (346.5805ms)\r\n\u2714 La Graciosa uses the requested local tangent-plane frame (3.9102ms)\r\n\u2714 Overpass features compile to island buildings, tracks and a closed coastline (3.5553ms)\r\n\u2714 mapped piers, breakwaters and groynes compile as georeferenced harbor structures (2.7034ms)\r\n\u2714 all player modes start at the walkable entrance to the Caleta de Sebo port (117.7882ms)\r\n\u2714 the player avatar is a beach-dressed articulated character instead of a capsule (72.6324ms)\r\n\u2714 the Caleta de Sebo spawn has no floating landmark sphere (44.1043ms)\r\n\u2714 the WebGPU renderer uses ACES, sRGB, and PCF coastal sunlight shadows (29.4846ms)\r\n\u2714 the active application does not preload NYC, tree-inventory, or subway modules (46.382ms)\r\n\u2714 the Overpass query requests mapped piers and breakwaters only (64.2534ms)\r\n\u2714 the island scene includes procedural terrain, coastal foam, and instanced house details (120.6369ms)\r\n\u2714 Caleta de Sebo spawn includes detail on the mapped fishing piers and boats (118.9496ms)\r\n\u2714 the minimap uses island OSM layers and follows the player position and heading (199.7079ms)\r\n\u2714 satellite export is georeferenced to the island bounds in Web Mercator (4.4409ms)\r\n\u2714 satellite export preserves aspect ratio at a responsive image size (7.5088ms)\r\n\u2714 satellite bounds and service image dimensions are validated (2.4121ms)\r\n\u2714 terrain UVs use island coordinates and satellite imagery has attribution and fallback (181.7154ms)\r\n\u2714 elevation grids decode signed decimetres and bilinearly sample in world coordinates (6.5289ms)\r\n\u2714 terrain surface creates upward-facing, coastline-clipped island triangles (3.8412ms)\r\n\u2714 the compiled island DEM contains meaningful above-sea-level relief (821.9236ms)\r\n\u2714 the Caleta port spawn is covered by a rendered terrain triangle (463.9932ms)\r\n\u2714 the Atlantic ocean uses animated physical waves and directional sunlight reflections (48.6042ms)\r\n\u2714 ocean waves remain part of the WebGPU scene and documented sea visuals (46.0579ms)\r\n\u2714 terrain detail placement is deterministic, bounded, and avoids roads and unwalkable terrain (69.2604ms)\r\n\u2714 terrain detail placement keeps each ground cover type within its elevation and slope range (36.7174ms)\r\n\u2139 tests 40\r\n\u2139 suites 0\r\n\u2139 pass 40\r\n\u2139 fail 0\r\n\u2139 cancelled 0\r\n\u2139 skipped 0\r\n\u2139 todo 0\r\n\u2139 duration_ms 5553.4589\r\n",
+        "durationMs": 8617,
+        "testResults": {
+          "testFramework": "unknown",
+          "runnerDetectedFrom": "none",
+          "testsTotal": 0,
+          "testsPassed": 0,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": true
+        }
+      },
+      {
+        "name": "production-site-build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "Static site built in dist/ (15 files).\r\n",
+        "durationMs": 2757
+      },
+      {
+        "name": "home-includes-seagull-mode",
+        "kind": "http-probe",
+        "verificationMethod": "output-contains",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!DOCTYPE html\u003E\r\n\u003Chtml lang=\u0022es\u0022\u003E\r\n\u003Chead\u003E\r\n  \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\r\n  \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0, viewport-fit=cover\u0022 /\u003E\r\n  \u003Ctitle\u003ELa Graciosa \u00B7 Slop Island\u003C/title\u003E\r\n  \u003Cmeta name=\u0022description\u0022 content=\u0022Explora La Graciosa, Canarias, en una escena 3D de Three.js y WebGPU con relieve topogr\u00E1fico, edificios, pistas, costa y oc\u00E9ano.\u0022 /\u003E\r\n  \u003Cmeta name=\u0022theme-color\u0022 content=\u0022#14535a\u0022 /\u003E\r\n  \u003Cmeta property=\u0022og:type\u0022 content=\u0022website\u0022 /\u003E\r\n  \u003Cmeta property=\u0022og:title\u0022 content=\u0022La Graciosa \u00B7 Slop Island\u0022 /\u003E\r\n  \u003Cmeta property=\u0022og:description\u0022 content=\u0022Explora La Graciosa en una aventura 3D interactiva con WebGPU.\u0022 /\u003E\r\n  \u003Clink rel=\u0022icon\u0022 type=\u0022image/svg\u002Bxml\u0022 href=\u0022./favicon.svg\u0022 /\u003E\r\n  \u003Clink rel=\u0022preconnect\u0022 href=\u0022https://cdn.jsdelivr.net\u0022 crossorigin /\u003E\r\n  \u003Clink rel=\u0022preconnect\u0022 href=\u0022https://server.arcgisonline.com\u0022 crossorigin /\u003E\r\n  \u003Cscript type=\u0022importmap\u0022\u003E\r\n    {\r\n      \u0022imports\u0022: {\r\n        \u0022three\u0022: \u0022https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.webgpu.js\u0022,\r\n        \u0022three/webgpu\u0022: \u0022https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.webgpu.js\u0022,\r\n        \u0022three/tsl\u0022: \u0022https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.tsl.js\u0022,\r\n        \u0022three/addons/\u0022: \u0022https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/\u0022\r\n      }\r\n    }\r\n  \u003C/script\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/main.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/graciosa-main.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/graciosa-coast.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/island-minimap.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/island-terrain-details.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/graciosa-exploration.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/graciosa-satellite.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/island-camera-input.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/island-camera-controller.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/graciosa-geodata.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/graciosa-terrain.js\u0022 /\u003E\r\n  \u003Clink rel=\u0022modulepreload\u0022 href=\u0022./js/graciosa-elevation.js\u0022 /\u003E\r\n  \u003Cscript type=\u0022module\u0022 src=\u0022./js/main.js\u0022\u003E\u003C/script\u003E\r\n  \u003Clink rel=\u0022preconnect\u0022 href=\u0022https://fonts.googleapis.com\u0022 /\u003E\r\n  \u003Clink rel=\u0022preconnect\u0022 href=\u0022https://fonts.gstatic.com\u0022 crossorigin /\u003E\r\n  \u003Clink rel=\u0022stylesheet\u0022 href=\u0022https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700\u0026display=swap\u0022 /\u003E\r\n  \u003Clink rel=\u0022stylesheet\u0022 href=\u0022./css/style.css\u0022 /\u003E\r\n\u003C/head\u003E\r\n\u003Cbody\u003E\r\n  \u003Csection id=\u0022loading-screen\u0022 role=\u0022status\u0022 aria-live=\u0022polite\u0022 aria-label=\u0022Carga del juego\u0022\u003E\r\n    \u003Cdiv class=\u0022loading-card\u0022\u003E\r\n      \u003Cimg class=\u0022loading-mark\u0022 src=\u0022./favicon.svg\u0022 alt=\u0022\u0022 /\u003E\r\n      \u003Cp class=\u0022loading-eyebrow\u0022\u003ELA GRACIOSA \u00B7 ISLAS CANARIAS\u003C/p\u003E\r\n      \u003Ch1 id=\u0022loading-title\u0022\u003EPreparando tu isla\u003C/h1\u003E\r\n      \u003Cdiv id=\u0022loading-progress\u0022 role=\u0022progressbar\u0022 aria-label=\u0022Carga del juego\u0022 aria-valuemin=\u00220\u0022 aria-valuemax=\u0022100\u0022 aria-valuenow=\u00224\u0022\u003E\r\n        \u003Cspan id=\u0022loading-progress-fill\u0022\u003E\u003C/span\u003E\r\n      \u003C/div\u003E\r\n      \u003Cp id=\u0022loading-message\u0022\u003EIniciando el motor gr\u00E1fico\u2026\u003C/p\u003E\r\n      \u003Cp id=\u0022loading-error\u0022 hidden\u003E\u003C/p\u003E\r\n      \u003Cbutton id=\u0022loading-retry\u0022 type=\u0022button\u0022 hidden\u003EVolver a intentar\u003C/button\u003E\r\n    \u003C/div\u003E\r\n  \u003C/section\u003E\r\n  \u003Cmain id=\u0022canvas-container\u0022 aria-label=\u0022Escena 3D de La Graciosa\u0022\u003E\u003C/main\u003E\r\n  \u003Caside id=\u0022minimap-panel\u0022 aria-label=\u0022Minimapa de La Graciosa\u0022\u003E\r\n    \u003Cdiv class=\u0022minimap-heading\u0022\u003E\u003Cspan\u003ELA GRACIOSA\u003C/span\u003E\u003Cspan class=\u0022minimap-subtitle\u0022\u003EPulsa tierra para ir\u003C/span\u003E\u003C/div\u003E\r\n    \u003Ccanvas id=\u0022island-minimap\u0022 role=\u0022img\u0022 tabindex=\u00220\u0022 aria-label=\u0022Minimapa ampliado de La Graciosa. Pulsa sobre tierra para teletransportar al jugador.\u0022\u003E\u003C/canvas\u003E\r\n    \u003Cdiv class=\u0022minimap-controls\u0022 aria-label=\u0022Controles del minimapa\u0022\u003E\r\n      \u003Cbutton type=\u0022button\u0022 data-map-zoom=\u0022in\u0022 aria-label=\u0022Acercar minimapa\u0022\u003E\u002B\u003C/button\u003E\r\n      \u003Cbutton type=\u0022button\u0022 data-map-zoom=\u0022out\u0022 aria-label=\u0022Alejar minimapa\u0022\u003E\u2212\u003C/button\u003E\r\n      \u003Cbutton type=\u0022button\u0022 data-map-center aria-label=\u0022Centrar minimapa en el jugador\u0022\u003ECentrar\u003C/button\u003E\r\n    \u003C/div\u003E\r\n    \u003Ca id=\u0022osm-attribution\u0022 href=\u0022https://www.openstreetmap.org/copyright\u0022 target=\u0022_blank\u0022 rel=\u0022noo\n\u2026[truncated]",
+        "durationMs": 2380
+      }
+    ],
+    "executions": [
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "args": [
+          "--test",
+          "tests/boot.test.cjs",
+          "tests/graciosa-exploration.test.mjs",
+          "tests/graciosa-runtime.test.cjs",
+          "tests/graciosa-coast.test.mjs",
+          "tests/graciosa-geodata.test.mjs",
+          "tests/graciosa-satellite.test.mjs",
+          "tests/graciosa-terrain.test.mjs",
+          "tests/island-terrain-details.test.mjs",
+          "tests/graciosa-water.test.cjs"
+        ],
+        "cwd": "C:\\Proyectos\\slop-Graciosa-Island",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": null,
+        "nodeVersion": null,
+        "packageManager": null,
+        "packageManagerExecutable": null,
+        "packageManagerVersion": null,
+        "cleanup": {
+          "RootProcessId": 12040,
+          "Completed": true,
+          "ProcessesObserved": 11,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "production-site-build",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "args": [
+          "tools/build-site.mjs"
+        ],
+        "cwd": "C:\\Proyectos\\slop-Graciosa-Island",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": null,
+        "nodeVersion": null,
+        "packageManager": null,
+        "packageManagerExecutable": null,
+        "packageManagerVersion": null,
+        "cleanup": {
+          "RootProcessId": 14116,
+          "Completed": true,
+          "ProcessesObserved": 2,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "home-includes-seagull-mode",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "args": [
+          "-e",
+          "const http=require(\u0027node:http\u0027),fs=require(\u0027node:fs\u0027);http.createServer((_req,res)=\u003E{res.writeHead(200,{\u0027content-type\u0027:\u0027text/html\u0027});res.end(fs.readFileSync(\u0027dist/index.html\u0027));}).listen(8766,\u0027127.0.0.1\u0027);"
+        ],
+        "cwd": "C:\\Proyectos\\slop-Graciosa-Island",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": null,
+        "nodeVersion": null,
+        "packageManager": null,
+        "packageManagerExecutable": null,
+        "packageManagerVersion": null,
+        "cleanup": {
+          "RootProcessId": 5172,
+          "Completed": true,
+          "ProcessesObserved": 2,
+          "ProcessesTerminated": 2,
+          "Failure": null
+        }
+      }
+    ]
+  }
+}
